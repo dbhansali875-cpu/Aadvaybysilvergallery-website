@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AADVAY by Silver Gallery. Tradition, reimagined. Jewellery that carries stories.">
+<title>AADVAY | By Silver Gallery</title>
+<style>
+:root{--burgundy:#5d080d;--burgundy-dark:#350407;--gold:#c9a86a;--gold-light:#ead9ad;--ink:#171311;--cream:#f6f0e5;--muted:#71675d;--line:rgba(201,168,106,.32)}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--burgundy-dark);color:#fff;padding:10px 18px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+nav{position:absolute;top:38px;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;color:#fff}
+.nav-brand{font-size:18px;letter-spacing:6px}.nav-links{display:flex;gap:28px;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.nav-links a:hover{color:var(--gold-light)}.menu{display:none}
+.hero{min-height:88vh;background:linear-gradient(90deg,rgba(25,5,4,.90),rgba(25,5,4,.36)),url("product_14.jpg") center/cover;display:flex;align-items:flex-end;position:relative;color:#fff}
+.hero-inner{width:min(1180px,90%);margin:0 auto;padding:100px 0 80px}
+.hero-logo{width:180px;height:180px;object-fit:cover;border-radius:50%;border:1px solid rgba(234,217,173,.7);margin-bottom:25px}
+.kicker{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold-light);margin:0 0 16px}
+h1{font-size:clamp(46px,8vw,92px);font-weight:400;letter-spacing:10px;margin:0 0 10px}
+.hero p{font-size:18px;line-height:1.7;max-width:520px;color:#f5eee1;margin:0 0 28px}
+.btn{display:inline-block;padding:14px 22px;border:1px solid var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-right:8px;transition:.2s}
+.btn.primary{background:var(--gold);color:#28140b}.btn:hover{transform:translateY(-2px)}
+.section{padding:95px 5vw}.section-inner{max-width:1180px;margin:auto}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8d6e38;margin:0 0 8px}
+h2{font-size:42px;font-weight:400;margin:0}.intro{max-width:470px;color:var(--muted);line-height:1.8;font-size:15px}
+.collection-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.collection{height:280px;position:relative;overflow:hidden;background:#2a110d}
+.collection img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.collection:hover img{transform:scale(1.05)}
+.collection:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(20,5,3,.82))}
+.collection span{position:absolute;bottom:20px;left:20px;color:#fff;z-index:2;font-size:16px;letter-spacing:1px}
+.story{background:var(--burgundy);color:#fff}.story-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.story-image{width:100%;height:560px;object-fit:cover}.story-copy p{color:#eadfce;line-height:1.9;font-size:16px}
+.gold-rule{width:70px;height:1px;background:var(--gold);margin:25px 0}
+.products{background:#fbf7ef}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.product-card{background:#fff;border:1px solid rgba(90,50,20,.10)}.product-image-wrap{aspect-ratio:1/1.16;overflow:hidden;background:#eee}
+.product-image-wrap img{width:100%;height:100%;object-fit:cover;transition:.5s}.product-card:hover img{transform:scale(1.03)}
+.product-info{padding:18px 18px 21px}.product-info h3{font-size:20px;font-weight:400;margin:4px 0 16px}
+.text-link{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#6d4a17}.text-link span{font-size:15px}
+.quote{text-align:center;background:#eee5d7;padding:100px 5vw}
+.quote blockquote{font-size:clamp(28px,4vw,48px);font-weight:400;line-height:1.35;max-width:850px;margin:0 auto;color:#4b1814}
+.quote cite{display:block;margin-top:25px;font-size:10px;letter-spacing:3px;color:#8d6e38;font-style:normal;text-transform:uppercase}
+.contact{background:#21100e;color:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact p{color:#dfd0bf;line-height:1.8}.contact-item{padding:18px 0;border-top:1px solid var(--line)}
+.contact-item small{display:block;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:9px;margin-bottom:7px}.contact-item a{font-size:16px}
+footer{background:#160806;color:#b9a999;padding:25px 5vw;font-size:10px;letter-spacing:1px;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){.nav-links{display:none}.menu{display:block;font-size:12px;letter-spacing:2px}.hero{min-height:80vh}.hero-inner{padding-bottom:60px}.collection-grid{grid-template-columns:repeat(2,1fr)}.story-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.story-image{height:420px}.product-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+@media(max-width:520px){.topbar{font-size:9px;letter-spacing:1.5px}nav{top:31px;padding:18px 5vw}.nav-brand{font-size:14px;letter-spacing:4px}h1{letter-spacing:6px}.hero-logo{width:125px;height:125px}.hero p{font-size:15px}.section{padding:68px 5vw}.section-head{display:block}h2{font-size:34px;margin-bottom:14px}.collection{height:220px}.product-grid{grid-template-columns:1fr}.story-image{height:360px}footer{display:block;line-height:1.8}}
+</style>
+</head>
+<body>
+<div class="topbar">AADVAY BY SILVER GALLERY · TRADITION, REIMAGINED</div>
+<nav>
+  <a class="nav-brand" href="#home">AADVAY</a>
+  <div class="nav-links"><a href="#collections">Collections</a><a href="#jewellery">Jewellery</a><a href="#story">Our Story</a><a href="#contact">Contact</a></div>
+  <a class="menu" href="#contact">Menu</a>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <img class="hero-logo" src="aadvay-logo.jpg" alt="AADVAY by Silver Gallery logo">
+    <p class="kicker">By Silver Gallery</p>
+    <h1>AADVAY</h1>
+    <p>Tradition, reimagined. Jewellery that carries stories, shaped by heritage and made to be remembered.</p>
+    <a class="btn primary" href="#jewellery">Explore Jewellery</a>
+    <a class="btn" href="https://wa.me/919611564565?text=Hi%20AADVAY%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20your%20jewellery%20collection." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+  </div>
+</header>
+
+<section class="section" id="collections">
+  <div class="section-inner">
+    <div class="section-head"><div><p class="eyebrow">Explore AADVAY</p><h2>Collections</h2></div><p class="intro">Discover jewellery inspired by India's enduring craft traditions, presented through the AADVAY lens.</p></div>
+    <div class="collection-grid">
+      <a class="collection" href="#jewellery"><img src="product_03.jpg" alt=""><span>Temple Jewellery</span></a>
+      <a class="collection" href="#jewellery"><img src="product_01.jpg" alt=""><span>Heritage</span></a>
+      <a class="collection" href="#jewellery"><img src="product_09.jpg" alt=""><span>Earrings</span></a>
+      <a class="collection" href="#jewellery"><img src="product_10.jpg" alt=""><span>Statement Pieces</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section story" id="story">
+  <div class="section-inner story-grid">
+    <img class="story-image" src="product_14.jpg" alt="AADVAY heritage portrait">
+    <div class="story-copy">
+      <p class="eyebrow">The AADVAY Story</p><h2>Jewellery that carries stories.</h2><div class="gold-rule"></div>
+      <p>AADVAY by Silver Gallery brings together the richness of Indian jewellery traditions and a contemporary appreciation for timeless design.</p>
+      <p>From statement pieces to heritage-inspired jewellery, every collection is presented as more than an ornament. It is a piece of culture, memory and expression.</p>
+      <a class="btn" href="https://www.instagram.com/aadvayofficial/" target="_blank" rel="noopener">Discover on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="section products" id="jewellery">
+  <div class="section-inner">
+    <div class="section-head"><div><p class="eyebrow">The Collection</p><h2>Selected Jewellery</h2></div><p class="intro">Prices are shared privately. Choose a piece and enquire directly with AADVAY for availability and details.</p></div>
+    <div class="product-grid">
+      
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_01.jpg" alt="Heritage Necklace" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Traditional Collection</p>
+          <h3>Heritage Necklace</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Heritage Necklace. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_02.jpg" alt="Traditional Pendant" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Heritage Collection</p>
+          <h3>Traditional Pendant</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Traditional Pendant. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_03.jpg" alt="Temple Collection" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Temple Jewellery</p>
+          <h3>Temple Collection</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Temple Collection. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_04.jpg" alt="Heritage Set" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Heritage Collection</p>
+          <h3>Heritage Set</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Heritage Set. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_05.jpg" alt="Antique Necklace" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Signature Collection</p>
+          <h3>Antique Necklace</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Antique Necklace. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_06.jpg" alt="Classic Gold Tone" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Classic Collection</p>
+          <h3>Classic Gold Tone</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Classic Gold Tone. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_07.jpg" alt="Signature Necklace" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Signature Collection</p>
+          <h3>Signature Necklace</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Signature Necklace. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_08.jpg" alt="Statement Choker" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Heritage Collection</p>
+          <h3>Statement Choker</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Statement Choker. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_09.jpg" alt="Madanika Earrings" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Madanika Collection</p>
+          <h3>Madanika Earrings</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Madanika Earrings. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_10.jpg" alt="Turquoise Heritage" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Heritage Collection</p>
+          <h3>Turquoise Heritage</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Turquoise Heritage. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_11.jpg" alt="Temple Pendant" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Temple Collection</p>
+          <h3>Temple Pendant</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Temple Pendant. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_12.jpg" alt="Temple Heritage" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Temple Collection</p>
+          <h3>Temple Heritage</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Temple Heritage. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="product_13.jpg" alt="Classic Necklace" loading="lazy">
+        </div>
+        <div class="product-info">
+          <p class="eyebrow">Classic Collection</p>
+          <h3>Classic Necklace</h3>
+          <a class="text-link" href="https://wa.me/919611564565?text=Hi AADVAY, I’m interested in the Classic Necklace. Please share the details and availability." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+        </div>
+      </article>
+    
+    </div>
+  </div>
+</section>
+
+<section class="quote"><blockquote>“Tradition, reimagined.<br>Jewellery that carries stories.”</blockquote><cite>AADVAY by Silver Gallery</cite></section>
+
+<section class="section contact" id="contact">
+  <div class="section-inner contact-grid">
+    <div>
+      <p class="eyebrow">Visit AADVAY</p><h2>Come see the collection.</h2>
+      <p>Visit our store in Jayanagar, Bengaluru, or connect with us directly for jewellery enquiries.</p>
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=1861%2C%2011th%20A%20Main%2C%2038th%20Cross%20Rd%2C%204th%20T%20Block%20East%2C%20Jayanagar%2C%20Bengaluru%2C%20Karnataka%20560041" target="_blank" rel="noopener">Open in Maps</a>
+    </div>
+    <div>
+      <div class="contact-item"><small>WhatsApp</small><a href="https://wa.me/919611564565" target="_blank" rel="noopener">+91 96115 64565</a></div>
+      <div class="contact-item"><small>Instagram</small><a href="https://www.instagram.com/aadvayofficial/" target="_blank" rel="noopener">@aadvayofficial</a></div>
+      <div class="contact-item"><small>Address</small><a href="https://www.google.com/maps/search/?api=1&query=1861%2C%2011th%20A%20Main%2C%2038th%20Cross%20Rd%2C%204th%20T%20Block%20East%2C%20Jayanagar%2C%20Bengaluru%2C%20Karnataka%20560041" target="_blank" rel="noopener">1861, 11th A Main, 38th Cross Rd,<br>4th T Block East, Jayanagar,<br>Bengaluru, Karnataka 560041</a></div>
+    </div>
+  </div>
+</section>
+<footer><span>© 2026 AADVAY BY SILVER GALLERY</span><span>TRADITION, REIMAGINED.</span></footer>
+</body>
+</html>
